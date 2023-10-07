@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+	<title>Placement Cell Student Dashboard</title>
+	<style>
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-image: url("firstpage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Logout Button Styles */
+.logout-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logout-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+.logout-btn a:hover {
+  color: #eeeeee;
+  text-decoration: underline;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #d9d9d9;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 36px;
+  }
+}
+
+/* Icon Styles */
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icons img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icons span {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px #d9d9d9;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.icons a:hover img {
+  transform: scale(1.1);
+}
+
+.icons a:hover span {
+  color: #3333ff;
+  text-shadow: 2px 2px #f2f2f2;
+}
+  </style>
+</head>
+<body>
+	<main>
+    <br><br><br><br>
+    <button class="logout-btn"><a href="login.php">Logout</a></button>
+      <center><h1><b>STUDENT DASHBOARD</b></h1></center><br><br><br>
+		<div class="icons">
+			<a href="profile.php"><img src="profile.png" alt="Profile Icon"><span>View Profile</span></a>
+      <a href="applied_jobs.php"><img src="job.jpeg" alt="Jobs Icon"><span>Intership/Job You Applied</span></a>
+			<a href="apply.php"><img src="apply.png" alt="Apply Icon"><span>Apply for Internship/Job</span></a>
+			<a href="company.php"><img src="company .jpeg" alt="Companies Icon"><span>Major Recruiters</span></a>
+			<a href="placed.php"><img src="placed.png" alt="Students Icon"><span>Students Placed</span></a>
+		</div>
+	</main>
+</body>
+</html>

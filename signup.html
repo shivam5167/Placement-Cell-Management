@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+  <head>
+    <title>Sign Up</title>
+   <style>
+    body{
+      background-image: url('firstpage.jpg');
+    background-size: cover;
+    }
+    .container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+button[type="submit"]:hover {
+  background-color: blue;
+}
+   </style>
+   <script>
+    /*
+    function validate(form){
+        fail=validateId(form.id.value);
+       fail += validateName(form.name.value);
+       fail += validateEmail(form.email.value);
+        fail += validateCgpa(form.cgpa.value);
+        fail += validateDepartment( document.getElementById("department").value);
+        fail += validateBatchyear(form.batch-year.value);
+        fail += validateUsername(form.username.value);
+        fail += validatePassword(form.password.value);
+        if (fail == "")
+        return true;
+        else { alert(fail); return false;}
+    }
+function validateId(field)
+{
+    if ( field== "") {
+    return "ID cannot be blank\n";
+  }
+   else if (!/^\d+$/.test(field)) {
+    return "ID must be a number\n";
+  } else {
+    return "";
+  }
+}
+function validateName(field) {
+  
+  // Name validation
+  if (field=== "") {
+   return "Name cannot be blank\n";
+  } else if (!/^[A-Za-z\s]+$/.test(field)) {
+    return "Name must contain only letters and spaces";
+  } else {
+    return "";
+  }
+}
+function validateEmail(field)
+{
+  // Email validation
+  if (field=== "") {
+    return "Email cannot be blank\n";
+  } else if (!/\S+@\S+\.\S+/.test(field)) {
+    return "Email is invalid\n";
+  } else {
+    return "";
+  }
+}
+  // CGPA validation
+function validateCgpa(field)
+{
+  if (field=== "") {
+    return "CGPA cannot be blank\n";
+  } else if (field< 0 || field> 10) {
+    return "CGPA must be between 0 and 10\n";
+  } else {
+    return "";
+  }
+}
+  // Department validation
+  function validateDepartment(field)
+  {
+  if (field=== "") {
+    return "Department cannot be blank\n";
+  } else {
+    return "";
+  }
+  }
+  function validateBatchyear(field)
+  {
+  // Batch year validation
+  if (field === "") {
+    return "Batch year cannot be blank\n";
+  } else {
+   return "";
+  }
+}
+function validateUsername(field)
+{
+  // Username validation
+  if (field === "") {
+    return "Username cannot be blank\n";
+  } else if (field.length < 6) {
+    return "Username must be at least 6 characters\n";
+}
+else {
+    return "";
+  }
+}
+function validatePassword(field)
+{
+  if (field === "") {
+    return "Password cannot be blank\n";
+  } else if (field.length < 6) {
+   return "Password must be at least 6 characters\n";
+    }
+ else {
+    return "";
+  }
+ }*/
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form id="signup-form"  method="post" action="signup.php" >
+        <div class="form-group">
+          <label for="id">ADMISSION ID NO:</label>
+          <input type="text" id="id" name="id" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="cgpa">CGPA:</label>
+          <input type="number" step="0.01" id="cgpa" name="cgpa" required>
+        </div>
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <select id="department" name="department" required>
+            <option value="" disabled selected>Select department</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="batch-year">Batch Year:</label>
+          <input type="number" id="batch-year" name="batch-year" min="1900" max="2099" step="1" required>
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+</html>
